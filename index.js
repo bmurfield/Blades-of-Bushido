@@ -10,22 +10,21 @@ const gravity = 0.7;
 
 const background = new Sprite({
   position: {
-    x:0,
-    y:0
+    x: 0,
+    y: 0,
   },
-  imageSrc: "./img/background.png"
-})
+  imageSrc: "./img/background.png",
+});
 
 const shop = new Sprite({
   position: {
-    x:600,
-    y:128
+    x: 600,
+    y: 128,
   },
   imageSrc: "./img/shop.png",
   scale: 2.75,
   framesMax: 6,
-})
-
+});
 
 const player = new Fighter({
   position: {
@@ -46,7 +45,17 @@ const player = new Fighter({
   offset: {
     x: 215,
     y: 157,
-  }
+  },
+  sprites: {
+    idle: {
+      imageSrc: "./img/samuraiMack/Idle.png",
+      framesMax: 8,
+    },
+    run: {
+      imageSrc: "./img/samuraiMack/Run.png",
+      framesMax: 8,
+    },
+  },
 });
 
 const enemy = new Fighter({
@@ -64,8 +73,6 @@ const enemy = new Fighter({
   },
   color: "blue",
 });
-
-console.log(player);
 
 const keys = {
   a: {
@@ -103,10 +110,13 @@ function animate() {
   enemy.velocity.x = 0;
 
   // player movement
+  player.image = player.sprites.idle.image;
   if (keys.a.pressed && player.lastKey === "a") {
     player.velocity.x = -5;
+    player.image = player.sprites.run.image;
   } else if (keys.d.pressed && player.lastKey === "d") {
     player.velocity.x = 5;
+    player.image = player.sprites.run.image;
   }
 
   // enemy movement
