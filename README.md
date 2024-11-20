@@ -23,7 +23,7 @@ A browser based 2 player fighting game
 
 This project is deployed using Netlify, so just click on the link below to be taken to the webpage:
 
-
+https://bladesofbushido.netlify.app/
 
 Once the game loads player 1 is controlled with WAD to move and Spacebar to attack. Player two uses the arrow keys to move and the down arrow to attack.
 
@@ -33,7 +33,8 @@ This website can be used to play a fun fighting game with your friend.
 
 ## Credits
 
-I followed a Youtube tutorial from Chris Courses, found here: https://www.youtube.com/watch?v=vyqbNFMDRGQ
+I followed a Youtube tutorial from Chris Courses, found here: 
+https://www.youtube.com/watch?v=vyqbNFMDRGQ
 I also used free sprite assests from itch.io
 
 ## License
