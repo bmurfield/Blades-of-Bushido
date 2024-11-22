@@ -3,7 +3,7 @@ const c = canvas.getContext("2d");
 
 canvas.width = 1024;
 canvas.height = 576;
-
+c.imageSmoothingEnabled = false
 c.fillRect(0, 0, canvas.width, canvas.height);
 
 const gravity = 0.7;
@@ -18,7 +18,7 @@ const background = new Sprite({
 
 const shop = new Sprite({
   position: {
-    x: 600,
+    x: 620,
     y: 128,
   },
   imageSrc: "./img/shop.png",
@@ -39,6 +39,8 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
+  attackDamage: 10,
+
   imageSrc: "./img/samuraiMack/Idle.png",
   framesMax: 8,
   scale: 2.5,
@@ -99,6 +101,7 @@ const enemy = new Fighter({
     x: -50,
     y: 0,
   },
+  attackDamage: 5,
   color: "blue",
   imageSrc: "./img/kenji/Idle.png",
   framesMax: 4,
@@ -230,7 +233,7 @@ function animate() {
     player.isAttacking &&
     player.framesCurrent === 4
   ) {
-    enemy.takeHit();
+    enemy.takeHit(player.attackDamage);
     player.isAttacking = false;
     gsap.to("#enemyHealth", {
       width: enemy.health + "%",
@@ -244,7 +247,7 @@ function animate() {
     enemy.isAttacking &&
     enemy.framesCurrent === 2
   ) {
-    player.takeHit();
+    player.takeHit(enemy.attackDamage);
     enemy.isAttacking = false;
     gsap.to("#playerHealth", {
       width: player.health + "%",
