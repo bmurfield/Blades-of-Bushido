@@ -39,7 +39,7 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
-  attackDamage: 10,
+  attackDamage: 15,
 
   imageSrc: "./img/samuraiMack/Idle.png",
   framesMax: 8,
@@ -101,7 +101,7 @@ const enemy = new Fighter({
     x: -50,
     y: 0,
   },
-  attackDamage: 5,
+  attackDamage: 10,
   color: "blue",
   imageSrc: "./img/kenji/Idle.png",
   framesMax: 4,

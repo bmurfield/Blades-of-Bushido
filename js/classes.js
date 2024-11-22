@@ -63,7 +63,7 @@ class Fighter extends Sprite {
     offset = { x: 0, y: 0 },
     sprites,
     attackBox = { offset: {}, width: undefined, height: undefined },
-    attackDamage = 10,
+    attackDamage = 15,
   }) {
     super({
       position,
@@ -122,11 +122,26 @@ class Fighter extends Sprite {
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
 
+    // Horizontal Boundary
+    if (this.position.x < 0) {
+      this.position.x = 0;
+    } else if (this.position.x + this.width > canvas.width) {
+      this.position.x = canvas.width - this.width;
+    }
+
+    // Vertical boundary for jumping
+    if (this.position.y < 0) {
+      this.position.y = 0;
+      this.velocity.y = 0; // Stop upward movement
+    }
+    
     // gravity function
     if (this.position.y + this.height + this.velocity.y >= canvas.height - 96) {
       this.velocity.y = 0;
       this.position.y = 330;
-    } else this.velocity.y += gravity;
+    } else {
+      this.velocity.y += gravity;
+    }
   }
 
   attack() {
