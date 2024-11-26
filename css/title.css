@@ -1,0 +1,88 @@
+/* Ensure full-screen height */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(to bottom, #818cf8, #1e293b); /* Gradient background */
+    overflow: hidden; /* Prevent scrollbars from floating blossoms */
+    font-family: 'Graduate', sans-serif; /* Google font */
+  }
+  
+  /* Title Container */
+  #title-container {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    padding-top: 300px;
+  }
+  
+  /* Game Title */
+  h1#game-title {
+    font-family: 'Press Start 2P', cursive; /* Google font */
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+  
+  /* Individual Letters Float Animation */
+  h1#game-title span {
+    display: inline-block;
+    animation: float-text 3s ease-in-out infinite alternate;
+  }
+  
+  /* Menu Buttons */
+  #menu-buttons {
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #64748b; /* Muted blue-gray for buttons */
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oxanium', sans-serif; /* Google font */
+  }
+  
+  button:hover {
+    background-color: #4c51bf;
+  }
+  
+  /* Floating Cherry Blossoms */
+  .blossom {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/cherry-blossom.svg'); /* Link to the SVG */
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: float-blossom 10s linear infinite;
+    opacity: 0.8; /* Slight transparency for realism */
+  }
+  
+  /* Blossom Animation */
+  @keyframes float-blossom {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50vw, 100vh) rotate(360deg); /* Float and rotate */
+      opacity: 0; /* Fade out */
+    }
+  }
+  
+  /* Floating Effect for Game Title */
+  @keyframes float-text {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  
