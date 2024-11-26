@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blades of Bushido - Instructions</title>
+  <link rel="stylesheet" href="./css/instructions.css"> <!-- Use a separate CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Graduate&family=Oxanium:wght@200..800&family=Press+Start+2P&display=swap"
+    rel="stylesheet" />
+</head>
+<body>
+  <audio id="background-music" src="./audio/title-screen-theme.mp3"></audio>
+  <button id="play-music-btn" style="position: absolute; top: 20px; right: 20px; z-index: 10;">
+    🎵 Play Music
+  </button>
+  
+  <h1 id="instructions-title">
+   Instructions
+  </h1>
+  
+  <div id="instructions-text">
+    <h2>Player Controls:</h2>
+    <div>
+      <h3>Player 1: Samurai Mack</h3>
+      <ul>
+        <li><strong>A</strong> - Move Left</li>
+        <li><strong>S</strong> - Move Right</li>
+        <li><strong>W</strong> - Jump</li>
+        <li><strong>Spacebar</strong> - Attack</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Player 2: Kenji</h3>
+      <ul>
+        <li><strong>Left Arrow</strong> - Move Left</li>
+        <li><strong>Right Arrow</strong> - Move Right</li>
+        <li><strong>Up Arrow</strong> - Jump</li>
+        <li><strong>Down Arrow</strong> - Attack</li>
+      </ul>
+    </div>
+    <h2>Game Rules:</h2>
+    <ul>
+      <li>The game ends when one player loses all their health.</li>
+      <li>The game also ends when the timer runs out.</li>
+    </ul>
+  </div>
+  
+  <div id="menu-buttons">
+    <button id="return-to-title-btn">Return to Title</button>
+    <button id="start-game-btn">Start Game</button>
+  </div>
+
+  <script src="./js/instructions.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* instructions.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #818cf8, #1e293b); /* Gradient background */
+    overflow-y: auto; /* Allow vertical scrolling */
+    font-family: 'Press Start 2P', cursive; /* Google font */
+    height: 100%;
+  }
+  
+  /* Instructions title styling */
+  #instructions-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px; /* Adjust title closer to the top */
+    letter-spacing: 2px;
+  }
+  
+  /* Instructions text styling */
+  #instructions-text {
+    font-size: 1rem; /* Slightly smaller for consistent retro look */
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto; /* Center the text */
+    padding: 20px; /* Add padding */
+    text-align: left;
+    color: #fff;
+  }
+  
+  #instructions-text h2,
+  #instructions-text h3 {
+    color: #ffffff;
+  }
+  
+  #instructions-text ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #instructions-text ul li {
+    margin: 8px 0;
+  }
+  
+  /* Menu buttons */
+  #menu-buttons {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #64748b; /* Muted blue-gray for buttons */
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Oxanium', sans-serif; /* Google font */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #4c51bf; /* Darker hover effect */
+    transform: scale(1.05); /* Slight scaling on hover */
+  }
+  
